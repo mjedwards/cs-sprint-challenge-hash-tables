@@ -10,17 +10,19 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here     
-    print(tickets)
     trip_dict = {}
     route = []
-    for i in range(length):
-        if tickets[i].source != tickets[i].destination:
-            route.append(tickets[i].source)
-    trip_dict[tickets[i]] = tickets[i]
+    for ticket in tickets:
+        departure, arrival = ticket.source, ticket.destination
+        if departure not in trip_dict:
+            trip_dict[departure] = arrival
+
+    search = "NONE"
+    next_destination = trip_dict[search]
+
+    while next_destination is not "NONE":
+        next_destination = trip_dict[search]
+        route.append(next_destination)
+        search = next_destination
+        
     return route
-
-ticket_1 = Ticket("NONE", "PDX")
-ticket_2 = Ticket("PDX", "DCA")
-
-tickets = [ticket_1, ticket_2]
-reconstruct_trip(tickets, 2)

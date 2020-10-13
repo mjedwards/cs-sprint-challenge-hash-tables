@@ -5,21 +5,14 @@ def has_negatives(a):
     # Your code here
     num_dict = {}
     stored = []
-    value = []
-    for i in range(len(a)):
-        if a[i] < 0:
-            stored.append(abs(a[i]))
-            
-            for j in range(len(stored)):
-                if stored[j] in a[j]:
-                    value.append(stored[j])
+    for i in a:
+        num_dict[i] = i
+       
+        if i and -i in num_dict:
+            item = abs(i)
+            stored.append(item)   
 
-                    result = value
-            
-
-        num_dict[a[i]] = a[i]
-
-    return result
+    return stored
 
 
 if __name__ == "__main__":
