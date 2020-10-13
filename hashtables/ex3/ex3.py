@@ -3,8 +3,7 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
-    return result
+    return 
 
 
 if __name__ == "__main__":
