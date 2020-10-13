@@ -14,4 +14,4 @@ def get_indices_of_item_weights(weights, length, limit):
     return None
 
 
-print(get_indices_of_item_weights([4, 6, 10, 15, 16], 5, 16))
+# print(get_indices_of_item_weights([4, 6, 10, 15, 16], 5, 16))
